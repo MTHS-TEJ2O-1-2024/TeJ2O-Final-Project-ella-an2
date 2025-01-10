@@ -5,17 +5,20 @@
  * This program is a protype for our final project
 */
 
-// variable
-let left = 0
-let right= 0
+let left = 1
+let right = 0
 
-// setup
 radio.setGroup(131)
 basic.showIcon(IconNames.Happy)
 
-// send
+// send left
 input.onButtonPressed(Button.A, function () {
-    left = left + 1
+    basic.showIcon(IconNames.Yes)
     radio.sendNumber(left)
 })
 
+// send right
+input.onButtonPressed(Button.B, function () {
+    basic.showIcon(IconNames.No)
+    radio.sendNumber(right)
+})
